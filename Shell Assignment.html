@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+		<meta content="Ronak Kogta" name="author">
+		<title>Shell Assignment</title>
+	</head>
+	<body>
+		<p>
+			<a name="pagetop"></a></p>
+		<div style="text-align: center;">
+			<table style=" text-align: left; width: 1241px; height: 112px;
+margin-left: auto; margin-right: auto;" border="1" cellpadding="2" cellspacing="2">
+				<tbody>
+					<tr>
+						<td style="vertical-align: top;" width="7%">
+							<img alt="unix" src="Shell%20Assignment_files/unix1.jpg" style="width: 100px; height: 100px;"></td>
+						<td style="width: 93%; vertical-align: top; text-align:
+center;">
+							<h1>
+								Programming Project - 3</h1>
+							<h3 style="font-style: italic;">
+								Creating an interactive user defined shell</h3>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div style="text-align: right;">
+			<table style=" text-align: left; width: 1014px; height: 584px;
+margin-left: auto; margin-right: auto;" border="0" cellpadding="2" cellspacing="2">
+				<tbody>
+					<tr>
+						<td style="vertical-align: top;">
+							<br>
+							<hr style="width: 100%; height: 2px;">
+							<span style="color:
+rgb(255, 0, 0);">Deadline</span>: September 12th, Thursday, 9pm.<br>
+							<br>
+							<span style="font-style: italic;">This assignment is broken into 
+two deadlines, just to give you more idea about more time to absorb the 
+details of this assingment.<br>
+							There will be no extension per se. If you submit the project late
+ then 35% of the marks will be deducted for each late day. For example, 
+out of the maximum marks possible, 35% will be deducted before the 
+grading. So if you submit the project 3 days late then, you will not get
+ any credit.</span><br>
+							<hr style="width: 100%; height: 2px;">
+							<p>
+								<span style="font-family: sans-serif; font-style: italic; font-weight: bold;">The
+ goal of the project is to create a user defined interactive shell 
+program that can create and manage new processes. The shell should be 
+able to create a process out of a system program like emacs, vi or any 
+user-defined executable</span><br>
+								<br style="font-family: sans-serif; font-style: italic;">
+								<span style="font-family: sans-serif;">The following are the specifications for the project. For each of the requirement an appropriate example is given along with it.<br>
+								<span style="color: rgb(51, 102, 255);">&nbsp;</span></span><br>
+								<b style="font-family: sans-serif; color: rgb(51, 102,
+	255);"><u> Specification 1:</u> <u>Display requirement</u></b><br style="font-family: sans-serif;">
+								<br style="font-family: sans-serif;">
+								<span style="font-family: sans-serif;">When you execute your code a shell prompt of the following form must appear:</span><br style="font-family: sans-serif;">
+								<span style="font-family: sans-serif;"> &lt;username@system_name:curr_dir&gt;</span><br style="font-family: sans-serif;">
+								<span style="font-family: sans-serif;"> E.g., &lt;Peytr@ICS231:~&gt;</span><br style="font-family:
+	sans-serif;">
+								<br style="font-family: sans-serif;">
+								<span style="font-family: sans-serif;"> The directory from which the shell is invoked will be the home directory of the shell and should be indicated by "~"</span><br style="font-family: sans-serif;">
+								<span style="font-family: sans-serif;"> If the user executes "cd" change dir then the corresponding change must be reflected in the shell as well.</span><br style="font-family: sans-serif;">
+								<span style="font-family: sans-serif;"> E.g., ./a.out</span><br style="font-family: sans-serif;">
+								<span style="font-family: sans-serif;"> &lt;Peytr@ICS231:~&gt;cd newdir</span><br style="font-family: sans-serif;">
+								<span style="font-family: sans-serif;"> &lt;Peytr@ICS231:~/newdir&gt;</span><br style="font-family: sans-serif;">
+								&nbsp;</p>
+							<p>
+								<b style="font-family: sans-serif; color: rgb(51, 102, 255);"><u>Specification 2:</u> <u>System commands with and without arguments</u></b></p>
+							<p>
+								<span style="font-family: sans-serif;">All other commands are 
+treated as system commands like : emacs, vi and so on. The shell must be
+ able to execute them either in the background or in the foreground.</span><br>
+								<br>
+								<b style="font-family: sans-serif; font-style: italic;"> Foreground processes</b><span style="font-family:
+	sans-serif; font-style: italic;">: For example, executing a "vi" 
+command in the foreground implies that your shell will wait for this 
+process to complete and regain control when this process exits.</span><br style="font-family: sans-serif; font-style: italic;">
+								<b style="font-family: sans-serif; font-style: italic;">Background processes</b><span style="font-family: sans-serif;
+	font-style: italic;">: Any command invoked with "&amp;" is treated as 
+background command. This implies that your shell will spawn that process
+ and doesn't wait for the process to exit. It will keep taking user 
+commands. If the background process exits then the shell must display 
+the appropriate message to the user.</span><br style="font-family: sans-serif; font-style: italic;">
+								<br style="font-family: sans-serif;">
+								<span style="font-family: sans-serif;"> E.g</span><br>
+								<span style="font-family: sans-serif;">&lt;Peytr@ICS231:~&gt; ls &amp;<br>
+								This command &nbsp;when finished, should print its result to stdout.</span></p>
+							<p>
+								<span style="font-family: sans-serif;">&lt;Peytr@ICS231:~&gt;emacs &amp;</span><br>
+								<span style="font-family: sans-serif;">&lt;Peytr@ICS231:~&gt; ls -l -a</span></p>
+							<p style="margin-left: 40px;">
+								.<br>
+								.<br>
+								.&nbsp; <em><span style="font-family: sans-serif;">Execute other commands </span></em><br>
+								.<br>
+								.</p>
+							<p>
+								<span style="font-family: sans-serif;">&lt;Peytr@ICS231:~&gt; echo hello</span><br style="font-family: sans-serif;">
+								<span style="font-family: sans-serif;"> </span><br style="font-family: sans-serif;">
+								<span style="font-family: sans-serif;"> After emacs exits, your shell program should check the exit status of emacs and print it on stderr&nbsp;</span><br style="font-family: sans-serif;">
+								<span style="font-family: sans-serif;"> &lt;Peytr@ICS231:~&gt;</span><br style="font-family:
+	sans-serif;">
+								<span style="font-family: sans-serif;"> emacs with pid 456 exited normally </span><br style="font-family: sans-serif;">
+								<span style="font-family: sans-serif;"> &lt;Peytr@ICS231:~&gt;</span></p>
+							<p>
+								<b style="font-family: sans-serif; color: rgb(51, 102, 255);"><u>Specification 3:</u>&nbsp;<u>User-defined commands</u></b></p>
+							<p>
+								<span style="font-family:arial,helvetica,sans-serif;">The following commands must be supported by the shell<br style="font-family: sans-serif;">
+								<br style="font-family: sans-serif;">
+								-<strong>pinfo</strong>&nbsp;: prints the process related info of your shell program.</span><br style="font-family: sans-serif;">
+								<span style="font-family: arial, helvetica, sans-serif;">&lt;Peytr@ICS231:~&gt;pinfo</span><br>
+								<span style="font-family:arial,helvetica,sans-serif;"> pid -- 231<br>
+								Process Status -- {R/S/S+/Z}<br>
+								memory -- 67854 {<em>Virtual Memory</em>}<br>
+								Executable Path --&nbsp; ~/a.out</span></p>
+							<p>
+								<span style="font-family:arial,helvetica,sans-serif;">-<strong>pinfo &lt;pid&gt;</strong>&nbsp;: prints the process info about given pid.</span><br style="font-family: sans-serif;">
+								<span style="font-family: arial, helvetica, sans-serif;">&lt;Peytr@ICS231:~&gt;pinfo 1</span></p>
+							<p>
+								<span style="font-family:arial,helvetica,sans-serif;">-<b style="font-family: sans-serif;">jobs</b>&nbsp;:
+ prints a list of all currently running jobs along with their pid, 
+particularly background jobs, in order of their creation.</span><br>
+								<span style="font-family: arial, helvetica, sans-serif;">&lt;Peytr@ICS231:~&gt;jobs</span><br>
+								<span style="font-family: arial, helvetica, sans-serif;">&nbsp; [1] emacs Assign.txt [231]</span><br>
+								<span style="font-family: arial, helvetica, sans-serif;">&nbsp; [2] firefox [234]</span><br>
+								<span style="font-family: arial, helvetica, sans-serif;">&nbsp; [3] vim [5678]</span></p>
+							<p>
+								<span style="font-family:arial,helvetica,sans-serif;">Here [3] i.e vim is most recent background job, and the oldest one is emacs.&nbsp;</span></p>
+							<p>
+								<span style="font-family:arial,helvetica,sans-serif;">-<b>kjob</b><strong>&nbsp;&lt;jobNumber&gt;</strong>&nbsp;<strong>&lt;signalNumber&gt;</strong>:&nbsp;takes the job id of a running job and sends a signal value to that process</span><br style="font-family: sans-serif;">
+								<span style="font-family: arial, helvetica, sans-serif;">&lt;Peytr@ICS231:~&gt; kjob 2 9</span><br>
+								<span style="font-family:arial,helvetica,sans-serif;"> it sends 
+sigkill to the process firefox, and as a result it is terminated. Here 9
+ represents the signal number, which is sigkill. For further info,&nbsp;</span><br>
+								<span style="font-family: arial, helvetica, sans-serif;">lookup <em><strong>man 7 signal</strong></em>&nbsp;</span></p>
+							<p>
+								<span style="font-family:arial,helvetica,sans-serif;">-<strong>fg &lt;jobNumber&gt;</strong>: brings background job with given job number to foreground.&nbsp;<br>
+								&lt;Peytr@ICS231:~&gt; fg 3<br>
+								Either brings the 3rd job which is <em>vim</em> to foreground or returns error if no such background number exists.</span></p>
+							<p>
+								<span style="font-family:arial,helvetica,sans-serif;"><strong>-overkill: &nbsp;</strong>kills all background process at once</span></p>
+							<p>
+								<span style="font-family:arial,helvetica,sans-serif;">-<b style="font-family: sans-serif;">quit</b>&nbsp;:
+ exits the shell. Your shell should exit only if the user types this 
+"quit" command. It should ignore any other signal from user like : 
+CTRL-D, CTRL-C, SIGINT, SIGCHLD etc.</span></p>
+							<p>
+								-<b style="font-family: sans-serif;">CTRL-Z</b>&nbsp;: <span style="font-family:arial,helvetica,sans-serif;">It should change the status of currently running job to stop, and push it in background process</span></p>
+							<p>
+								<b style="font-family: sans-serif; color: rgb(51, 102, 255);"><u>General notes</u></b></p>
+							<ol style="font-family: sans-serif;">
+								<li>
+									<strong>Useful commands</strong> : uname, hostname, signal, 
+waitpid, getpid, kill, execvp, strtok, fork,getopt etc.&nbsp;&nbsp;and 
+so on. Type: man 2 &lt;command_name&gt; to learn of all possible 
+invocations/variants of these general commands. Pay specific attention 
+to the various data types used within these commands and explore the 
+various header files needed to use these commands.</li>
+								<li>
+									If the command cannot be run or returns an error it should be 
+handled appropriately. Look at perror.h for appropriate routines to 
+handle errors.</li>
+								<li>
+									Use of system() call is prohibited, if you use it you'll get zero marks.</li>
+								<li>
+									Use signal handlers to process signals from exiting background 
+processes. Marks will be deducted if proper signal handling is not done.
+ For example, if your shell program is terminated due to an exiting 
+child process then marks will be deducted. Any other error will also be 
+penalized.</li>
+								<li>
+									The user can type the command anywhere in the command line 
+i.e., by giving spaces, tabs etc. Your shell should be able to handle 
+such scenarios appropriately.</li>
+								<li>
+									The user can type in any command, including, ./a.out, which 
+starts a new process out of your shell program. In all cases, your shell
+ program must be able to execute the command or show the error message 
+if the command cannot be executed.</li>
+								<li>
+									If code doesn't compile it is zero marks.</li>
+								<li>
+									Segmentation faults at the time of grading will be penalized.</li>
+								<li>
+									You are encouraged to discuss your design first before 
+beginning to code. Discuss your issues on portal, as well as you can 
+contatct TAs</li>
+								<li>
+									You can work together but implement your code independently to 
+maximize the learning aspect. Please adhere to the anti-plagiarism 
+policies of the course and the institute.</li>
+								<li>
+									<b>Do not take codes from seniors or in some case, your 
+batchmates, by any mistake. We will evaluate cheating scenarios along 
+with previous few year submisssions. So please take care.</b></li>
+							</ol>
+							<br style="font-style: italic;">
+							<div style="text-align: center;">
+								<a href="#pagetop">Top</a></div>
+							<hr style="width: 100%; height: 2px;">
+							<hr style="width: 100%; height: 2px;">
+							<span style="font-weight: bold;"><span style="text-decoration: underline;"><span style="font-style: italic;">OStas,ICS231</span></span></span><br>
+							<span style="font-style: italic;"> </span></td>
+					</tr>
+					<tr>
+						<td style="vertical-align: top;">
+							&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			<p style="text-align: left;">
+				&nbsp;</p>
+		</div>
+	
+
+
+</body></html>
